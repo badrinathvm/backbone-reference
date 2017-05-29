@@ -1,7 +1,7 @@
 /**
  * Created by Badri on 5/29/17.
  */
-define(['jquery','underscore','backbone','templates/compiled/thumbs'],function($,_,Backbone,Template){
+define(['jquery', 'underscore', 'backbone', 'templates/compiled/thumbs'], function ($, _, Backbone, Template) {
 
     'use strict';
 
@@ -9,11 +9,11 @@ define(['jquery','underscore','backbone','templates/compiled/thumbs'],function($
 
         el: $('body'),
 
-        initialize:function(){
+        initialize: function () {
             this.render();
         },
 
-        render:function(){
+        render: function () {
             console.log("Data is" + this.model);
             this.$el.append(Template.thumbs({
                 name: this.model.get('name'),

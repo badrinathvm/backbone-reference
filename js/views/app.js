@@ -13,7 +13,7 @@ define([
         'views/ThumbCollectionView',
         'components/ThumbData'
     ],
-    function ($, _, Backbone, HomeTemplate, TodoView, TodoCollectionView, TodoModel, CollectionData,ThumbCollectionView,ThumbData) {
+    function ($, _, Backbone, HomeTemplate, TodoView, TodoCollectionView, TodoModel, CollectionData, ThumbCollectionView, ThumbData) {
 
         'use strict';
 
