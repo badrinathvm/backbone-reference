@@ -1,7 +1,7 @@
 /**
  * Created by Badri on 5/29/17.
  */
-define(['jquery','underscore','backbone','models/todo'],
+define(['jquery','underscore','backbone','models/TodoModel'],
     function ($,_,Backbone,Todo) {
 
     'use strict';

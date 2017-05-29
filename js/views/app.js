@@ -8,7 +8,7 @@ define([
     'text!templates/home.hbs',
     'views/TodoView',
     'views/TodoCollectionView',
-    'models/todo',
+    'models/TodoModel',
     'components/data'
     ],
 
