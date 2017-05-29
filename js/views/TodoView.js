@@ -4,8 +4,10 @@
 define(['jquery',
     'underscore',
     'backbone',
-        'text!templates/home.hbs'],
-    function($,_,Backbone,HomeTemplate){
+        'text!templates/home.hbs',
+    'handlebars',
+    'templates/compiled/home'],
+    function($,_,Backbone,HomeTemplate,Handlebars,Templates){
 
     'use strict';
 
@@ -15,15 +17,22 @@ define(['jquery',
 
          el: $('body'),
 
-         template: _.template( HomeTemplate ),
+         //template: _.template( HomeTemplate ),
+         //template: Templates['home.hbs'],
+         //template: Templates.HomeTemplate,
 
          initiliaze: function(){
-             this.content = $("#data");
+
          },
 
          render:function(){
-                console.log("Inside TodoView");
-                this.$el.html(this.template);
+             console.log(this.template);
+                /*this.$el.html(this.template({
+                    model:"AAAA"
+                }));*/
+
+             this.$el.append(Templates.home({model:"AAAA"}));
+             return this;
          }
      });
 

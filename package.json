@@ -28,10 +28,20 @@
     "requirejs-text": "^2.0.12",
     "todomvc-app-css": "^1.0.0",
     "todomvc-common": "^1.0.1",
-    "underscore": "^1.7.0"
+    "underscore": "^1.7.0",
+    "handlebars": "^4.0.10",
+    "handlebars-amd": "^0.0.1",
+    "handlebars-loader": "^1.5.0",
+    "handlebars-runtime": "^1.0.12"
   },
   "devDependencies": {
-    "grunt": "0.3.17",
-    "grunt-exec": "0.2.1"
+    "grunt": "~0.4.1",
+    "grunt-exec": "0.2.1",
+    "babel-cli": "^6.2.0",
+    "babel-core": "^6.2.1",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-register": "^6.2.0",
+    "grunt-contrib-handlebars": "~0.5.10",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }
