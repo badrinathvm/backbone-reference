@@ -29,5 +29,9 @@
     "todomvc-app-css": "^1.0.0",
     "todomvc-common": "^1.0.1",
     "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "grunt": "0.3.17",
+    "grunt-exec": "0.2.1"
   }
 }
