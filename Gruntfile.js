@@ -22,7 +22,8 @@ module.exports = function(grunt) {
                     amd: true
                 },
                 files: {
-                    'js/templates/compiled/home.js':'js/templates/home.hbs'
+                    'js/templates/compiled/home.js':'js/templates/home.hbs',
+                    'js/templates/compiled/thumbs.js':'js/templates/thumbs.hbs'
                 }
             }
         },

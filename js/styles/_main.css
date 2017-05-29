@@ -2,3 +2,21 @@
     text-decoration: line-through;
     color: #bbb;
 }
+
+.thumb {
+    width:23%;
+    padding-left:2%;
+    margin-top:16px;
+    font-family: 'Helvetica','Arial',sans-serif;
+    float:left;
+}
+.thumb:first-child{
+    padding-left:1%;
+}
+.thumb:last-child{
+    padding-right: 1%;
+}
+
+img {
+    width:100%;
+}

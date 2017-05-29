@@ -3,7 +3,8 @@
  */
 define(['jquery', 'underscore', 'collections/TodoCollection'], function ($, _, TodoCollection) {
     'use strict';
-    var collections = new TodoCollection([{
+    var collections = new TodoCollection([
+        {
             description: 'Pick Groceries from Costco',
             status: "complete"
         },

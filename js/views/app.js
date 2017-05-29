@@ -9,10 +9,14 @@ define([
         'views/TodoView',
         'views/TodoCollectionView',
         'models/TodoModel',
-        'components/data'
+        'components/TodoData',
+        'views/ThumbCollectionView',
+        'components/ThumbData'
     ],
-    function ($, _, Backbone, HomeTemplate, TodoView, TodoCollectionView, TodoModel, CollectionData) {
+    function ($, _, Backbone, HomeTemplate, TodoView, TodoCollectionView, TodoModel, CollectionData,ThumbCollectionView,ThumbData) {
+
         'use strict';
+
         var AppView = Backbone.View.extend({
 
             tagName: 'li',
@@ -24,15 +28,22 @@ define([
             },
 
             render: function () {
+
                 // only one to do Item
+
                 /* var todoItem = new TodoModel({description: "Pick Groceries from Costco", status:"complete"});
                  var todoView = new TodoView({
                      model: todoItem
                  }); */
 
                 // Collection of to do items
-                var todoCollectionView = new TodoCollectionView({
+
+                /*var todoCollectionView = new TodoCollectionView({
                     collection: CollectionData
+                });*/
+
+                new ThumbCollectionView({
+                    collection: ThumbData
                 });
 
             }
