@@ -7,10 +7,12 @@ define([
     'backbone',
     'text!templates/home.hbs',
     'views/TodoView',
-    'models/todo'
+    'views/TodoCollectionView',
+    'models/todo',
+    'collections/TodoCollection'
     ],
 
-    function($,_,Backbone,HomeTemplate,TodoView,Todo){
+    function($,_,Backbone,HomeTemplate,TodoView,TodoCollectionView,TodoModel,TodoCollectionModel){
 
     'use strict';
 
@@ -25,16 +27,35 @@ define([
         },
 
          render: function(){
-                console.log("Control inside Render function");
 
-                var todoItem = new Todo({description: "Pick Groceries from Costco", status:"complete"});
+             // only one to do Item
+               /* var todoItem = new TodoModel({description: "Pick Groceries from Costco", status:"complete"});
 
                 var todoView = new TodoView({
                     model: todoItem
                 });
-                //console.log(todoView.render().el);
-                todoView.render();
-                //$(document.body).append( todoView.render().$el);
+
+                todoView.render();*/
+
+                // Collection of to do items
+
+                var todoCollection = new TodoCollectionModel([
+                    {
+                        description: 'Pick Groceries from Costco',
+                        status: "complete"
+                    },
+                    {
+                        description: 'Pick Fruits from Whole Foods',
+                        status: "incomplete"
+                    },
+                    {
+                        description: 'Grab Pizza from Blaze',
+                        status: "incomplete"
+                    }
+                ]);
+
+                var todoCollectionView = new TodoCollectionView({collection:todoCollection});
+                todoCollectionView.render();
          }
 
      }) ;

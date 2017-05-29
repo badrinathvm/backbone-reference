@@ -27,11 +27,12 @@ define(['jquery',
 
          render:function(){
              console.log(this.template);
-                /*this.$el.html(this.template({
-                    model:"AAAA"
-                }));*/
 
-             this.$el.append(Templates.home({model:"AAAA"}));
+             this.$el.append(Templates.home({
+                 description: this.model.get('description'),
+                 status: this.model.get('status')
+             }));
+
              return this;
          }
      });
