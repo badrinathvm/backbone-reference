@@ -1,12 +1,9 @@
 /**
  * Created by Badri on 5/29/17.
  */
-define(['jquery','underscore','collections/TodoCollection'],function($,_,TodoCollection){
-
+define(['jquery', 'underscore', 'collections/TodoCollection'], function ($, _, TodoCollection) {
     'use strict';
-
-    var collections = new TodoCollection( [
-        {
+    var collections = new TodoCollection([{
             description: 'Pick Groceries from Costco',
             status: "complete"
         },
@@ -23,7 +20,5 @@ define(['jquery','underscore','collections/TodoCollection'],function($,_,TodoCol
             status: "complete"
         }
     ]);
-
     return collections;
-
 });

@@ -25,12 +25,27 @@ module.exports = function(grunt) {
                     'js/templates/compiled/home.js':'js/templates/home.hbs'
                 }
             }
+        },
+
+        //js beautifier
+        js_beautify: {
+            default_options: {
+                options: {
+                    end_with_newline: true,
+                    max_preserve_newlines: 1
+                },
+                files: {
+                    'tmp/default_options': ['js/*/*.js']
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-handlebars');
 
     grunt.registerTask('default', ['handlebars']);
+
+    grunt.loadNpmTasks('grunt-js-beautify');
 
 };
 

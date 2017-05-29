@@ -1,5 +1,4 @@
 'use strict';
-
 var paths = {
     jquery: '../node_modules/jquery/dist/jquery',
     underscore: '../node_modules/underscore/underscore',
@@ -10,24 +9,22 @@ var paths = {
     handlebars: '../node_modules/handlebars-runtime/handlebars.runtime'
     //handlebars: 'lib/handlebars.runtime'
 };
-
 //Require.js allows us to configure shortcut alias
 require.config({
-
     //shim config allows us to configure dependencies.
-    shim:{
-        underscore:{
+    shim: {
+        underscore: {
             exports: '_'
         },
-        backbone:{
+        backbone: {
             deps: [
                 'underscore',
                 'jquery'
             ],
             exports: 'Backbone'
         },
-        handlebars:{
-          exports: 'Handlebars'
+        handlebars: {
+            exports: 'Handlebars'
         },
         backboneLocalstorage: {
             deps: ['backbone'],
@@ -36,13 +33,8 @@ require.config({
     },
     paths: paths
 });
-
-
-require(['backbone','views/app'],
-    function(Backbone,AppView){
-
-    Backbone.history.start();
-
-    new AppView();
-
-});
+require(['backbone', 'views/app'],
+    function (Backbone, AppView) {
+        Backbone.history.start();
+        new AppView();
+    });

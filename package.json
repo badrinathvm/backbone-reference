@@ -42,6 +42,7 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-register": "^6.2.0",
     "grunt-contrib-handlebars": "~0.5.10",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-js-beautify": "^0.1.4"
   }
 }
