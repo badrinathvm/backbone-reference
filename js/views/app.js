@@ -9,10 +9,10 @@ define([
     'views/TodoView',
     'views/TodoCollectionView',
     'models/todo',
-    'collections/TodoCollection'
+    'components/data'
     ],
 
-    function($,_,Backbone,HomeTemplate,TodoView,TodoCollectionView,TodoModel,TodoCollectionModel){
+    function($,_,Backbone,HomeTemplate,TodoView,TodoCollectionView,TodoModel,CollectionData){
 
     'use strict';
 
@@ -30,31 +30,14 @@ define([
 
              // only one to do Item
                /* var todoItem = new TodoModel({description: "Pick Groceries from Costco", status:"complete"});
-
                 var todoView = new TodoView({
                     model: todoItem
                 });
-
                 todoView.render();*/
 
                 // Collection of to do items
 
-                var todoCollection = new TodoCollectionModel([
-                    {
-                        description: 'Pick Groceries from Costco',
-                        status: "complete"
-                    },
-                    {
-                        description: 'Pick Fruits from Whole Foods',
-                        status: "incomplete"
-                    },
-                    {
-                        description: 'Grab Pizza from Blaze',
-                        status: "incomplete"
-                    }
-                ]);
-
-                var todoCollectionView = new TodoCollectionView({collection:todoCollection});
+                var todoCollectionView = new TodoCollectionView({collection:CollectionData});
                 todoCollectionView.render();
          }
 

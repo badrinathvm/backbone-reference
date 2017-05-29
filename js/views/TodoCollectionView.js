@@ -10,8 +10,6 @@ define(['jquery','underscore','backbone','views/TodoView'],
         var TodoCollectionView = Backbone.View.extend({
 
             render: function(){
-                console.log("Control came inside TodcollectionView render")
-
                 this.collection.each(function(todo){
                         var todoView = new TodoView({model: todo});
                         todoView.render();

@@ -28,6 +28,7 @@ define(['jquery',
          render:function(){
              console.log(this.template);
 
+             //Place for rendering the template
              this.$el.append(Templates.home({
                  description: this.model.get('description'),
                  status: this.model.get('status')
