@@ -11,13 +11,18 @@ define(['jquery',
     function ($, _, Backbone, HomeTemplate, Handlebars, Templates) {
         'use strict';
         var TodoView = Backbone.View.extend({
+
             tagName: 'li',
+
             el: $('body'),
             //template: _.template( HomeTemplate ),
             //template: Templates['home.hbs'],
             //template: Templates.HomeTemplate,
-            initiliaze: function () {
+
+            initialize: function () {
+                this.render();
             },
+
             render: function () {
                 //Place for rendering the template
                 this.$el.append(Templates.home({

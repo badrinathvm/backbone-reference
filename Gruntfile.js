@@ -32,7 +32,7 @@ module.exports = function(grunt) {
             default_options: {
                 options: {
                     end_with_newline: true,
-                    max_preserve_newlines: 1
+                    max_preserve_newlines: 2
                 },
                 files: {
                     'tmp/default_options': ['js/*/*.js']

@@ -3,8 +3,15 @@
  */
 define(['jquery', 'underscore', 'backbone', 'views/TodoView'],
     function ($, _, Backbone, TodoView) {
+
         'use strict';
+
         var TodoCollectionView = Backbone.View.extend({
+
+            initialize: function () {
+                this.render();
+            },
+
             render: function () {
                 this.collection.each(function (todo) {
                     var todoView = new TodoView({
@@ -14,6 +21,7 @@ define(['jquery', 'underscore', 'backbone', 'views/TodoView'],
                 }, this);
                 return this;
             }
+
         });
         return TodoCollectionView;
     });
